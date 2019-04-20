@@ -1,0 +1,99 @@
+$theam-color : #004085;
+
+.heading {
+    font-size: 25px;
+    padding: 20px 0px;
+    color: $theam-color;
+    text-align: center;
+}
+
+.category-button {
+    background-color: #39a752;
+    color: white;
+    font-weight: 500;
+    border-color: #39a752;
+    width: 100%;
+    outline:none;
+}
+
+.category-button.tab-active {
+    background-color: white;
+    color: #39a752;
+    border: 2px solid;
+}
+
+.category-button.tab-active:after {
+    z-index: -1;
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: solid 8px #39a752;
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.view-price {
+    font-size: 10px;
+    color: $theam-color;
+}
+
+.view-price-icon {
+    background-color: $theam-color;
+    color: white;
+    padding: 5px;
+    border-radius: 34px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+}
+
+table {
+    tr {
+    td:nth-child(1) {
+        width: 10%;
+      }
+      td:nth-child(2) {
+        width: 40%;
+      }
+      td:nth-child(3) {
+        width: 8%;
+        text-align: center;
+      }
+      td:nth-child(4) {
+        width: 15%;
+      }
+    }
+}
+
+.action-tag{
+    font-size: 10px;
+    color: gray;
+}
+
+.action-tag-cal {
+    color: $theam-color !important;
+}
+
+.campaign {
+    .campaign-name {
+        color: $theam-color
+    }
+
+    .campaign-country {
+        font-size: 14px;
+        color: gray;
+    }
+}
+
+.campaign-icon {
+    height: 40px;
+    width: 40px;
+}

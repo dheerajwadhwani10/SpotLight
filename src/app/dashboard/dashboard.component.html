@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="heading">Manage <strong>Campaigns</strong>
+  </div>
+
+  <div class="row mx-5 mb-4">
+    <div class="col-sm-4"><button type="button" class="btn btn-primary category-button" [ngClass]="{'tab-active' : activeTab == 'upcoming'}"
+        (click)="filterCampaignData('upcoming')">UPCOMING
+        CAMPAIGN</button></div>
+    <div class="col-sm-4"><button type="button" class="btn btn-primary category-button" [ngClass]="{'tab-active' : activeTab == 'live'}"
+        (click)="filterCampaignData('live')">LIVE
+        CAMPAIGN</button></div>
+    <div class="col-sm-4"> <button type="button" class="btn btn-primary category-button" [ngClass]="{'tab-active' : activeTab == 'past'}"
+        (click)="filterCampaignData('past')">PAST
+        CAMPAIGN</button></div>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>DATE</th>
+        <th>CAMPAIGN</th>
+        <th>VIEW</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngIf="displayCampaignData.length <= 0">
+        <td colspan="4" class="text-center"><strong>No Data Available</strong></td>
+      </tr>
+      <tr *ngFor="let campaign of displayCampaignData  | slice: (currentPage-1) * pageSize : (currentPage-1) * pageSize + pageSize">
+        <td>{{campaign.campaignDate}}
+          <div>{{getDateDifference(campaign.campaignDate)}}</div>
+        </td>
+        <td class="campaign">
+          <div class="campaign-icon float-left"><i class="fa fa-3x" [ngClass]="campaign.icon" aria-hidden="true"></i></div>
+          <div class="float-left pl-2">
+            <span class="campaign-name">{{campaign.campaignName}}</span>
+            <div class="campaign-country">
+              <span *ngFor="let country of campaign.campaignCountry; last as l">{{country}}
+                <span *ngIf="!l">,</span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td><i class="fa fa-usd view-price-icon" aria-hidden="true"></i><span class="view-price"><br>View Pricing</span></td>
+        <td>
+          <span class="text-center float-left" style="width: 50px;"><i class="fa fa-file-text-o" aria-hidden="true"></i><br><span
+              class="action-tag">CSV</span></span>
+          <span class="text-center float-left" style="width: 50px;"><i class="fa fa-signal" aria-hidden="true"></i><br><span
+              class="action-tag">REPORT</span></span>
+          <span class="text-center float-left" style="width: 80px;"><i class="fa fa-calendar action-tag-cal"
+              aria-hidden="true" (click)="d.toggle()"></i><br><span class="action-tag action-tag-cal">SCHEDULE
+              AGAIN</span></span>
+          <input class="form-control p-0 m-0" [ngModel]="campaign.date" (ngModelChange)="onChangeDate($event)" (change)="onChangeDate($event)" style="height: 0; width: 0" placeholder="yyyy-mm-dd"
+            name="dp" ngbDatepicker #d="ngbDatepicker">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ngb-pagination class="float-right" *ngIf="displayCampaignData.length > 0" (pageChange)="loadPage($event)" [pageSize]="pageSize"
+    [collectionSize]="displayCampaignData.length" [(page)]="currentPage" aria-label="Default pagination"></ngb-pagination>
+</div>

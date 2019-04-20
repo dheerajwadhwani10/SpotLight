@@ -1,0 +1,155 @@
+[
+    {
+        "campaignName": "Test WhatsApp",
+        "campaignDate": "2019-04-15",
+        "campaignCountry": [
+            "US"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Test Facebook",
+        "campaignDate": "2019-04-18",
+        "campaignCountry": [
+            "JP"
+        ],
+        "icon": "fa-facebook"
+    },
+    {
+        "campaignName": "Super Jewels Quest",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR"
+        ],
+        "icon": "fa-user"
+    },
+    {
+        "campaignName": "Mole Slayer",
+        "campaignDate": "2019-04-12",
+        "campaignCountry": [
+            "FR"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-user"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-facebook"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-whatsapp"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-user"
+    },
+    {
+        "campaignName": "Mancala Mix",
+        "campaignDate": "2019-10-15",
+        "campaignCountry": [
+            "CA",
+            "FR",
+            "JP"
+        ],
+        "icon": "fa-facebook"
+    }
+]

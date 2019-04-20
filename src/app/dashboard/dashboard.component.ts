@@ -12,8 +12,9 @@ export class DashboardComponent implements OnInit {
   public displayCampaignData: any = [];
   public today = new Date();
   public currentPage = 1;
-  public activeTab :any;
-  public pageSize = 10;
+  public activeTab = 'past';
+  public pageSize = 5;
+  public date: Date;
 
   constructor(private spotLightService: SpotLightService) {
 
@@ -27,6 +28,7 @@ export class DashboardComponent implements OnInit {
     this.spotLightService.getCampaignData().subscribe(data => {
       this.campaignData = data;
       this.displayCampaignData = data;
+      this.filterCampaignData(this.activeTab);
     });
   }
 
@@ -79,5 +81,11 @@ export class DashboardComponent implements OnInit {
 
   loadPage(event) {
     this.currentPage = event;
+  }
+
+  onChangeDate(index, event) {
+    let date = event.year + '-' + event.month + '-' + event.day;
+    this.campaignData[index].campaignDate = new Date(date);
+    this.filterCampaignData(this.activeTab);
   }
 }

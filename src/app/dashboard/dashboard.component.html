@@ -28,8 +28,8 @@
       <tr *ngIf="displayCampaignData.length <= 0">
         <td colspan="4" class="text-center"><strong>No Data Available</strong></td>
       </tr>
-      <tr *ngFor="let campaign of displayCampaignData  | slice: (currentPage-1) * pageSize : (currentPage-1) * pageSize + pageSize">
-        <td>{{campaign.campaignDate}}
+      <tr *ngFor="let campaign of displayCampaignData  | slice: (currentPage-1) * pageSize : (currentPage-1) * pageSize + pageSize; index as i">
+        <td>{{campaign.campaignDate | date:'yyyy-MM-dd'}}
           <div>{{getDateDifference(campaign.campaignDate)}}</div>
         </td>
         <td class="campaign">
@@ -52,8 +52,8 @@
           <span class="text-center float-left" style="width: 80px;"><i class="fa fa-calendar action-tag-cal"
               aria-hidden="true" (click)="d.toggle()"></i><br><span class="action-tag action-tag-cal">SCHEDULE
               AGAIN</span></span>
-          <input class="form-control p-0 m-0" [ngModel]="campaign.date" (ngModelChange)="onChangeDate($event)" (change)="onChangeDate($event)" style="height: 0; width: 0" placeholder="yyyy-mm-dd"
-            name="dp" ngbDatepicker #d="ngbDatepicker">
+          <input class="form-control p-0 m-0" [ngModel]="campaign.campaignDate" (ngModelChange)="onChangeDate(i, $event)"
+            style="height: 0; width: 0" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
         </td>
       </tr>
     </tbody>
